@@ -16,6 +16,11 @@
 	width: 4.5rem;
 	margin-top: 4rem;
 
+	&:active,
+	&:focus {
+		outline: none;
+		border: none;
+	}
 
 	&::before,
 	&::after {

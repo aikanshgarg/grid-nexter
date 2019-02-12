@@ -21,3 +21,4 @@
 	1. extends (typography)
 	2. modifiers (typography)
 	3. Object-fit: cover; for fitting the images inside a cell, figure element (gallery.scss)
+	4. Image overlay with bg image linear gradient(header)

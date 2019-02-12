@@ -1,4 +1,45 @@
 .header {
 	background-color: $color-grey-dark-1;
 	grid-column: full-start / col-end 6;
+
+	background-image: linear-gradient(rgba($color-secondary,.93), rgba($color-secondary,.93)), url(../img/hero.jpeg);
+	background-size: cover;
+	background-position: center;
+	padding: 8rem;
+	padding-top: 4rem;
+
+	display: grid; // 2nd level
+	grid-template-rows: 1fr min-content 6rem 1fr; // giving all space available to 1st row (nexter logo)
+	grid-template-columns: max-content;
+	grid-row-gap: 1.5rem;
+	justify-content: center;
+
+
+	&__logo {
+		height: 3rem;
+		justify-self: center;
+	}
+
+	&__seenon-text {
+		color: $color-grey-light-1;
+		font-size: 1.4rem;
+		text-align: center;
+	}
+
+	&__seenon-logos {
+		
+
+		
+		img {
+			height: 2.5rem;
+			
+		}
+	}
+
+	&__btn {
+		align-self: start;
+		justify-self: start;
+	}
+
+
 }
