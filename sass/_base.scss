@@ -24,7 +24,7 @@ $font-display: 'Josefin Sans', sans-serif;
 
 html {
 	box-sizing: border-box;
-	font-size: 62.5%; // 1rem = 10px
+	font-size: 62.5%; // 1rem = 10px, 10px is 62.5% of 16px(default browser font-size)
 }
 
 body {
@@ -37,4 +37,14 @@ body {
 .container {
 	display: grid;
 	grid-template-rows: 80vh min-content 40vw repeat(3, min-content); // min-content adjusts row height according to available content
+	grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start]repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; 
+	// sidebar of 80px width (fixed position, thus we can't use margin: 0 auto trick to center 8 columns)
+	// min: 60px and max:1fr to make some fractional space on left side of 8 columns (hack to center the content)
+	// 8 equal columns such that each had width min enough to accomodate it's content and max of 140px
+	// min: 60px and max:1fr to make some fractional space on right side of 8 columns (hack to center the content)
+
+	& > * {
+		padding: 40px;
+		font-size: 3rem;
+	}
 }
