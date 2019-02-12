@@ -2,7 +2,7 @@
 	grid-column: center-start / center-end;
 	margin: 15rem 0;
 
-	display: grid; // 2nd level grid
+	display: grid; // 2nd level grid (for responsive layout)
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 	grid-gap: 7rem;
 }
@@ -11,31 +11,78 @@
 .home {
 	background-color: $color-grey-light-1;
 
+	display: grid; // 3rd level grid (2 columns and rows determined by CSS automatically)
+	grid-template-columns: repeat(2, 1fr);
+	grid-row-gap: 3.5rem;
+
 	&__img {
-		width: 100%;
+		width: 100%; // images should always be responisve and given width in %
+		grid-row: 1 / 2;// same explicit position for img and like
+		grid-column: 1 / -1;
+		z-index: 1;
 	}
 
 	&__like {
 		fill: $color-primary;
+		grid-row: 1 / 2; // same explicit position for img and like
+		grid-column: 2 / 3;
+		height: 2rem;
+		width: 2rem;
+		z-index: 2;
+		justify-self: end;// align horizontally to right
+		margin: 1 rem;
 	}
 
 	&__name {
+		grid-row: 1 / 2;
+		z-index: 3;
+		grid-column: 1 / -1;
 
+		width: 80%;
+		justify-self: center; // center text along the row axis
+		align-self: end; // along column axis (vertical)
+
+		font-family: $font-display;
+		color: #fff;
+		background-color: $color-secondary;
+		font-size: 1.6rem;
+		text-align: center;
+		padding: 1.25rem;
+		font-weight: 400;
+		transform: translateY(50%);
+	}
+
+	&__btn {
+		grid-column: 1 / -1;
+
+
+
+	}
+
+	&__location,
+	&__rooms {
+		margin-top: 2.5rem;
 	}
 
 	&__location,
 	&__rooms,
 	&__price,
 	&__area {
+		font-size: 1.5rem;
+		margin-left: 2rem;
+
+		display: flex;
+		align-items: center; // vertically center
 
 		svg {
 			fill: $color-primary;
 			height: 2rem;
 			width: 2rem;
+			margin-right: 1rem;
 		}
 
 		p {
-
+		
 		}
 
 	}

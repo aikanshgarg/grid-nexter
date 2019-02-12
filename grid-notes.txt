@@ -11,6 +11,8 @@
 
 - We don't usually define the no. of rows, only columns do the work for us, mostly(implicit rows added by CSS grid)
 
+- Images should always be responisve and given width in %
+
 - NEW THINGS:
 	1. extends (typography)
 	2. modifiers (typography)
