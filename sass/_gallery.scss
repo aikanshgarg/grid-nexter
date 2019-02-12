@@ -12,6 +12,8 @@
 
 	&__item {
 
+		overflow: hidden; // for image zoom-in effect
+
 		&--1 {
 			grid-row: 1 / 3;
 			grid-column: 1 / 3;
@@ -76,6 +78,15 @@
 		width: 100%;
 		height: 100%; // both height and width are required for object-fit
 		display: block; // required for object-fit
-		object-fit: cover;
+		object-fit: cover; // to fit images inside a cell
+
+		filter: brightness(80%);
+		transition: all .4s;
+
+		&:hover {
+			-webkit-transform: scale(1.15);
+  			transform: scale(1.15);
+  			filter: brightness(100%);
+		}
 	}
 }
