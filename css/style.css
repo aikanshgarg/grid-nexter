@@ -1,12 +1,12 @@
 /* Mozilla based browsers */
 *::-moz-selection {
   background-color: #c69963;
-  color: #6D5D4B; }
+  color: #101d2c; }
 
 /* Works in Safari */
 *::selection {
   background-color: #c69963;
-  color: #6D5D4B; }
+  color: #101d2c; }
 
 *,
 *::before,
@@ -115,6 +115,7 @@ body {
     transform: translateY(1.3rem); }
 
 .header {
+  font-family: "Josefin Sans", sans-serif;
   background-color: #54483A;
   grid-column: full-start / col-end 6;
   background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
@@ -131,11 +132,26 @@ body {
     height: 3rem;
     justify-self: center; }
   .header__seenon-text {
-    color: #f9f7f6;
-    font-size: 1.4rem;
-    text-align: center; }
-  .header__seenon-logos img {
-    height: 2.5rem; }
+    font-family: "Nunito", sans-serif;
+    color: #aaa;
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center; }
+    .header__seenon-text::before, .header__seenon-text::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: currentColor; }
+  .header__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
+    justify-items: center; }
+    .header__seenon-logos img {
+      height: 2.5rem;
+      filter: brightness(70%); }
   .header__btn {
     align-self: start;
     justify-self: start; }
@@ -200,7 +216,8 @@ body {
 .story__text {
   font-size: 1.5rem;
   font-style: italic;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  font-family: "Josefin Sans", sans-serif; }
 
 .homes {
   grid-column: center-start / center-end;

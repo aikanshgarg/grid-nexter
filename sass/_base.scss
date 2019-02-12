@@ -18,13 +18,13 @@ $font-display: 'Josefin Sans', sans-serif;
 /* Mozilla based browsers */
 *::-moz-selection {
     background-color: $color-primary;
-    color: $color-grey-dark-2;
+    color: $color-secondary;
 }
 
 /* Works in Safari */
 *::selection {
     background-color: $color-primary;
-    color: $color-grey-dark-2;
+    color: $color-secondary;
 }
 
 *,
