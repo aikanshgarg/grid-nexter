@@ -3,10 +3,10 @@
 
 	margin: 15rem 0;
 
-	// grid inside grid (for 6 features)
+	// 2nd level: grid inside grid (for 6 features)
 	display: grid;
 	//grid-template-columns: repeat(3, 1fr); uncommenting to make responsive
-	grid-template-columns:repeat(autofit, minmax(25rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); // autofit fits as many columns possible (each with min-width:250px and max 1fr)
 	grid-gap: 6rem;
 
 	align-items: start; // to make diff amount of text align properly from start
@@ -14,7 +14,7 @@
 
 .feature {
 
-	display: grid; // 3rd level grid 
+	display: grid; // 3rd level grid (for a particular feature)
 	grid-template-columns: min-content 1fr;
 	grid-row-gap: 1.5rem;
 	grid-column-gap: 2.5rem;
@@ -25,7 +25,7 @@
 		height: 4.5rem;
 		grid-row: 1 / span 2;
 
-		transform: translateY(-1rem);
+		transform: translateY(-1rem); // for symmetry
 	}
 
 	&__text {
