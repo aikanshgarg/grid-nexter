@@ -1,4 +1,28 @@
 .gallery {
-	background-color: $color-grey-dark-1;
+	background-color: $color-grey-light-1;
 	grid-column: full-start / full-end;
+
+	// we consider the smallest element(img) in our grid to define the size of one cell
+	display: grid; // (8cols * 7rows)
+	grid-template-columns: repeat(8, 1fr); // equal width columns
+	grid-template-rows: repeat(7, 5vw); // 7 rows, each with height of 5% of vw: this is done to maintain an aspect ratio for each cell when scaled down/up
+	grid-gap: 1.5rem;
+	padding: 1.5rem; 
+
+
+	&__item {
+
+		&--1 {
+			grid-row: 1 / 3;
+			grid-column: 1 / 3;
+		}
+
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%; // both height and width are required for object-fit
+		display: block; // required for object-fit
+		object-fit: cover;
+	}
 }

@@ -17,14 +17,14 @@
 
 	&__img {
 		width: 100%; // images should always be responisve and given width in %
-		grid-row: 1 / 2;// same explicit position for img and like
+		grid-row: 1 / 2;// same explicit position for img and like and name
 		grid-column: 1 / -1;
 		z-index: 1;
 	}
 
 	&__like {
 		fill: $color-primary;
-		grid-row: 1 / 2; // same explicit position for img and like
+		grid-row: 1 / 2; // same explicit position for img and like and name
 		grid-column: 2 / 3;
 		height: 2rem;
 		width: 2rem;
@@ -34,7 +34,7 @@
 	}
 
 	&__name {
-		grid-row: 1 / 2;
+		grid-row: 1 / 2; // same explicit position for img and like and name
 		z-index: 3;
 		grid-column: 1 / -1;
 
