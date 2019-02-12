@@ -13,6 +13,8 @@
 
 - We don't usually define the no. of rows, only columns do the work for us, mostly(implicit rows added by CSS grid)
 
+- Better over Flexbox when we need to give spaces b/w elements as in flexbox we'll need margin while here we have grid-gap!
+
 - Images should always be responisve and given width in %
 
 - NEW THINGS:
