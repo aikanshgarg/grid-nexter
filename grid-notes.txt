@@ -1,3 +1,5 @@
+- .feature{feature $}*6 >>> Emmet magic
+
 - To get the node modules folder from package.json file: sudo npm install
 
 -  universal reset using *? Because that should get rid of unexpected paddings and margins, and especially of their differences between browsers.
@@ -6,3 +8,9 @@
 	1. Analyze the no. of unique parts (8 column layout, in our case)
 	2. Make a rough layout of these using grid
 	3. Use only responsive units like %, vh, vw, min-content etc. NO PIXELS. 
+
+- We don't usually define the no. of rows, only columns do the work for us, mostly(implicit rows added by CSS grid)
+
+- NEW THINGS:
+	1. extends (typography)
+	2. modifiers (typography)

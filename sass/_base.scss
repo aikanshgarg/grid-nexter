@@ -43,8 +43,5 @@ body {
 	// 8 equal columns such that each had width min enough to accomodate it's content and max of 140px
 	// min: 60px and max:1fr to make some fractional space on right side of 8 columns (hack to center the content)
 
-	& > * {
-		padding: 40px;
-		font-size: 3rem;
-	}
+	
 }

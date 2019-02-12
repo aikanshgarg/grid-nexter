@@ -1,0 +1,27 @@
+
+// not a mixin, but extend: pastes all selectors here
+%heading {
+	font-family: $font-display;
+	font-weight: 400;
+}
+
+.heading-1 {
+	@extends %heading;
+}
+
+.heading-2 {
+	@extends %heading;	
+}
+
+.heading-3 {
+	@extends %heading;
+}
+
+.heading-4 {
+	@extends %heading;
+	font-size: 1.9rem;
+
+	&--light {color: $color-grey-light-1;}
+	&--dark {color: $color-grey-dark-1;}
+
+}
