@@ -5,6 +5,10 @@
 	display: grid; // 2nd level grid (for responsive layout)
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 	grid-gap: 7rem;
+
+	@media only screen and (max-width: $bp-medium) {
+		margin: 10rem 0;		
+	}
 }
 
 
@@ -30,7 +34,7 @@
 		width: 2rem;
 		z-index: 2;
 		justify-self: end;// align horizontally to right
-		margin: 1 rem;
+		margin: 1rem;
 	}
 
 	&__name {
