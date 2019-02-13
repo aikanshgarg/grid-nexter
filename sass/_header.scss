@@ -19,6 +19,15 @@
 	grid-row-gap: 1.5rem;
 	justify-content: center;
 
+	// spanning the column all over the screen width
+	@media only screen and (max-width: $bp-medium) {
+		grid-column: 1 / -1;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		padding: 5rem;
+	}
+
 
 	&__logo {
 		height: 3rem;
