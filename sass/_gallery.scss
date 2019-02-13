@@ -81,6 +81,7 @@
 		object-fit: cover; // to fit images inside a cell
 
 		filter: brightness(80%);
+		cursor: zoom-in;
 		transition: all .4s;
 
 		&:hover {

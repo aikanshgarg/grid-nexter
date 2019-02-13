@@ -10,8 +10,12 @@
 	padding-top: 4rem;
 
 	display: grid; // 2nd level
-	grid-template-rows: 1fr min-content 6rem 1fr; // giving all space available to 1st row (nexter logo)
-	grid-template-columns: max-content;
+	grid-template-rows: 1fr min-content minmax(min-content, 6rem) 1fr; 
+	// 1st row: giving all space available to nexter logo
+	// 2nd row: least amount of space for content for your own home:
+	// 3rd row: at least have space for content(break into new line when needed) or give 60px height when available
+	// 4th row: giving all space available to button. REST 2 rows are implicitly defined by CSS itself
+	grid-template-columns: minmax(min-content,max-content);// for responsive width 
 	grid-row-gap: 1.5rem;
 	justify-content: center;
 
@@ -45,10 +49,11 @@
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 3rem;
 		justify-items: center;
-
+		align-items: center; // each logo item is centered inside grid along Y axis
 		
 		img {
-			height: 2.5rem;
+			max-height: 2.5rem; // height can scale down (max-height makes it responsive)
+			max-width: 100%; // for maintaining aspect ratio ( responsive)
 			filter: brightness(70%);
 		}
 	}
